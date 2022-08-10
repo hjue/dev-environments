@@ -5,9 +5,9 @@ RUN apt-get install -y wget git gcc curl
 
 ENV NODE_VERSION 16.16.0
 
-RUN url="https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz"; \
-    wget -O node.tar.xz "$url"; \
-    tar -xJf node.tar.xz -C /usr/local --strip-components=1 --no-same-owner; \
+RUN url="https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.gz"; \
+    wget -O node.tar.gz "$url"; \
+    tar -xzf node.tar.gz -C /usr/local --strip-components=1 --no-same-owner; \
     ln -s /usr/local/bin/node /usr/local/bin/nodejs; \
     rm -f node.tar.xz; \
     node --version; \
