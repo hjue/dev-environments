@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM hjue/dev-env:base
 
 ENV DEBIAN_FRONTEND=noninteractive
 

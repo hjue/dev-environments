@@ -1,7 +1,4 @@
-FROM ubuntu:20.04
-
-RUN apt-get update
-RUN apt-get install -y wget git gcc curl
+FROM hjue/dev-env:base
 
 ENV NODE_VERSION 16.16.0
 

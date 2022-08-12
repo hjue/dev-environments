@@ -1,11 +1,9 @@
-FROM ubuntu:20.04
+FROM hjue/dev-env:base
 
-RUN apt-get update
-RUN apt-get install -y wget git gcc curl
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get install -y openjdk-8-jdk && \
+RUN apt-get update && apt-get install -y openjdk-8-jdk && \
     java -version
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
