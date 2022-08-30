@@ -1,9 +1,10 @@
 FROM ubuntu:20.04
 
-ENV DEBIAN_FRONTEND=noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Shanghai
 
 RUN apt-get update
-RUN apt-get install -y wget git gcc curl
+RUN apt-get install -y wget git gcc curl build-essential vim
 
 RUN apt-get -y install mysql-server 
 

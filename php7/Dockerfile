@@ -1,7 +1,5 @@
 FROM hjue/dev-env:base
 
-ENV DEBIAN_FRONTEND=noninteractive
-
 RUN apt-get update && \
     apt-get -y install \
         php-cli \

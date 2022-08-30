@@ -1,8 +1,6 @@
 FROM hjue/dev-env:base
 
 
-ENV DEBIAN_FRONTEND=noninteractive
-
 RUN apt-get update && apt-get install -y openjdk-8-jdk && \
     java -version
 
