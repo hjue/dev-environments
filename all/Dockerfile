@@ -37,6 +37,8 @@ RUN url="https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"
     rm yarn.tar.gz; \
     yarn --version;
 
+RUN npm install -g pnpm
+
 ## php7
 RUN apt-get update && \
     apt-get -y install \
