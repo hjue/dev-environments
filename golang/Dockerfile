@@ -13,7 +13,13 @@ RUN url="https://go.dev/dl/go$GOLANG_VERSION.linux-amd64.tar.gz"; \
   rm go.tgz; \
   go version
 
+
+
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
+
+ENV GOPROXY=https://goproxy.cn
+RUN go install github.com/go-delve/delve/cmd/dlv@latest \
+  && go install golang.org/x/tools/gopls@latest
